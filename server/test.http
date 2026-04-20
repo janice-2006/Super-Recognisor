@@ -1,0 +1,36 @@
+### Register a New User
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "janice_tester",
+    "email": "janicesheryn2@gmail.com",
+    "password": "mypassword123"
+}
+
+### Login an Existing User
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "janice@example.com",
+    "password": "mypassword123"
+}
+### Get My Profile Data
+GET http://localhost:5000/api/auth/user
+x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjlkOTFjYTY5MzkzOGExZWM3ODRjZThhIn0sImlhdCI6MTc3NTgzNzYyMywiZXhwIjoxNzc1ODQxMjIzfQ.AhwyOfDU9107GBgewYSGwGXoOQ-uQwkr5sXFIcgKHeU
+
+### Submit a New Game Attempt
+PUT http://localhost:5000/api/game/attempt
+Content-Type: application/json
+x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjlkOTFjYTY5MzkzOGExZWM3ODRjZThhIn0sImlhdCI6MTc3NTgzNzYyMywiZXhwIjoxNzc1ODQxMjIzfQ.AhwyOfDU9107GBgewYSGwGXoOQ-uQwkr5sXFIcgKHeU
+
+{
+    "level": "Easy",
+    "score": 95,
+    "accuracy": 0.98,
+    "reactionTime": 1.2
+}
+
+### Test Game Route Connection
+GET http://localhost:5000/api/game/test

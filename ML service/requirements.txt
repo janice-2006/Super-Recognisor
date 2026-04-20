@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+python-multipart
+git+https://github.com/ageitgey/face_recognition_models
+setuptools<70
+face_recognition
+numpy
+opencv-python
+scikit-learn
